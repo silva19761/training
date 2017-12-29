@@ -1,0 +1,88 @@
+DOM --> Document Objet Manipulation
+SPA --> Single pages Architecture
+
+
+What is jQuery?
+	is a library, 
+	Fast, small (32k), open, feature rich
+	HTML document transversal and manipulation
+	Event Handling
+	Animation
+	Ajax
+	Very compatible
+	Extensible
+	Cross browser
+When use jQuery?
+	WebSiyes
+	Small to medium-sized web apps
+	Enhancement of brown-field web applicationa
+When not use jQuery?
+	As primary structure in large web pages
+	When using one or two jQuery features
+
+Started
+	Document ready function
+	-Short vrsion
+		- $(function(){});
+	-Long version
+		$(document).ready(function(){});
+
+Selectors
+	Selectors for
+		Elements, by ID, attribute, name etc...
+		Atribute
+		Form Elements
+		Heirarchy (Parent, Child, Descendant, Sibiling)
+		Elements by state (eneable, disable, hidden, Selected)
+		Position
+		Class
+$('Selector')
+$('Selector').method();
+
+		Specificity
+$("selector1, selector2, selector N");
+$("element[attr='value'][attr='value2']");
+
+-Warped sets
+$('Selector')[0]
+$('Selector').get(0);
+
+- Adds to warpped set but not to DOM
+$('Selector').add("<div>Added content</div>");
+	
+$("*");
+$("elementName"); Note: is not for the attribute name, is for the objet Name, for example selecting an TextBox
+$("#elementId");
+$(".class");
+
+Selector by Attributes
+	$("element[attr]"); select all thos that have the attribute specified
+	$("element[attr='value']"); select all thos that have the attribute with a particular value
+	$("element[attr^'value']"); select all thos that have the attribute begins with specified value
+	$("element[attr$'value']");
+	$("element[attr*'value']");
+
+Hierarchy Selectors
+	$("Ancestor descendant");
+	$("parent element > child element");
+	$("prev element + next element");
+	$("prev sibiling + next sibiling");
+Positional Selectors
+	$("Element:first");
+	$("Element:last");
+
+jQuery Filters
+	$(":button");
+	$(":checkbox");
+	$(":password");
+	$(":submit");
+	$(":text");
+	$(":file");
+	$(":contains(text));
+	$(":not(selector));
+
+Chaining
+	-Allows you to run multiple commands  on a warped  set while only accessing those DOM elements once
+
+	$("selector").method();
+	$("selector").method().method1().method2().methodN();
