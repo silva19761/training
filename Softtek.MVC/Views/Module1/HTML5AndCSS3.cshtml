@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "HTML5AndCSS3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Acordion.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/Acordion.js"></script>
+<h1>Modulo 1</h1>
+<h2>HTML5 And CSS3</h2>
+@*<script>
+    $(document).ready(
+
+
+    $('#b1').onclick = function changeText() {
+
+        var b1 = document.getElementById('b1');
+
+        if (b1.onclick = "changeText();") {
+            document.getElementById('FirstP').innerHTML = document.getElementById("NewText").value;
+        }
+    }
+    );
+    //$(function () {
+    //    $('#b1').one('click', changeText);
+    //});
+    
+
+</script>*@
+<div class="row">
+    <div class="col-md-8">
+        <h2>Accordion Animado</h2>
+        <p>Click en los botones para colapsar o extender la informacion</p>
+
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p id="FirstP">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Cambiar el texto del panel 1</h2>
+        <input class="form-control" id="NewText" type="text"/>
+        <input type="button" value="Cambiar Texto" id="b1" />
+    </div>
+</div>
+

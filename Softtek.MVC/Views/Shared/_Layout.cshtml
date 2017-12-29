@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/Menu.css" rel="stylesheet" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,15 +17,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+                    @*<li>@Html.ActionLink("Module1", "Index", "Home")</li>
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("HTML5 And CSS3", "Index", "Home")</li>
+                    </ul>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>*@
+                @*@Html.Partial("_LoginPartial")*@
+                    <ul>        
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>                
+                        <li>
+                            Modulo 1
+                            <ul>
+                                <li>@Html.ActionLink("HTML5 And CSS3", "HTML5AndCSS3", "Module1")</li>
+                                <li>@Html.ActionLink("Bootstrap", "Bootstrap", "Module1")</li>
+                                <li>@Html.ActionLink("Java Script", "jQuery", "Module1")</li>
+                            </ul>
+                        </li>
+                        <li>Modulo 2</li>
+                        <li>Modulo 3</li>
+                    </ul>
             </div>
         </div>
     </div>
@@ -33,7 +49,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Jorge Alejandro Silva Castro</p>
         </footer>
     </div>
 
